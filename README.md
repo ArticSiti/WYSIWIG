@@ -25,5 +25,8 @@ npm run lint
 
 Для корректной работы приложения, нужно запустить его на localhost (иначе не будет работать функци копирования)
 
+```
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
