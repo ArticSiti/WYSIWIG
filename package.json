@@ -11,8 +11,7 @@
     "@vueup/vue-quill": "^1.1.0",
     "core-js": "^3.8.3",
     "quill-blot-formatter": "^1.0.5",
-    "vue": "^3.2.13",
-    "vue2-editor": "^2.10.3"
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

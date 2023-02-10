@@ -115,15 +115,10 @@ export default {
 		},
 		changeCopy() {
 			try {
-				// const content = document.querySelector('.editor__text').innerHTML;
-				// const blobInput = new Blob([content], {type: 'text/html'});
-				// const clipboardItemInput = new ClipboardItem({'text/html': blobInput});
-				// navigator.clipboard.write([clipboardItemInput]);
 				let body = document.querySelector('.editor')
 				this.copied = body.innerHTML
 				navigator.clipboard.writeText(this.copied)
 			} catch (e) {
-				// Handle error with user feedback - "Copy failed!" kind of thing
 				console.log(e);
 			}
 
@@ -137,15 +132,6 @@ export default {
 				default:
 					break;
 			}
-		},
-		copyTextNoInput() {
-			const storage = document.createElement('textarea');
-			storage.value = this.$refs.message.text;
-			this.$refs.reference.appendChild(storage);
-			storage.select();
-			storage.setSelectionRange(0, 99999);
-			document.execCommand('copy');
-			this.$refs.reference.removeChild(storage);
 		},
 	},
 
@@ -231,8 +217,9 @@ export default {
 				color: #ffffff;
 			}
 		}
-		&-img{
-			img{
+
+		&-img {
+			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
