@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "assets/main";
+@import "assets/scss/app";
 .home{
 	width: 100%;
 	background-color: rgba(30, 30, 30, 1);

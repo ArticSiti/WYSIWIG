@@ -93,12 +93,16 @@ export default {
 			this.titleUpperCase = true
 			this.paragraphLowerCase = false
 			this.contentMessageTemp = this.contentMessageTemp.toUpperCase();
+			this.contentEnd = this.contentEnd.toUpperCase();
+			this.contentDescription = this.contentDescription.toUpperCase();
 			return this.contentMessageTemp
 		},
 		changeParagraph() {
 			this.titleUpperCase = false
 			this.paragraphLowerCase = true
 			this.contentMessageTemp = this.contentMessageTemp.toLowerCase();
+			this.contentEnd = this.contentEnd.toLowerCase();
+			this.contentDescription = this.contentDescription.toLowerCase();
 			return this.contentMessageTemp
 		},
 		changeBefore() {
@@ -139,7 +143,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/main";
+@import "@/assets/scss/app";
+@import "./src/assets/scss/vendor/variables";
 
 .editor {
 	padding: 76px 0 76px;
@@ -152,7 +157,7 @@ export default {
 				width: 40px;
 				height: 40px;
 				padding: 10px;
-				background-color: #282828;
+				background-color: $dark;
 				border: none;
 				border-radius: 4px;
 				margin-left: 12px;
@@ -175,14 +180,14 @@ export default {
 				align-items: center;
 				background: none;
 				border: none;
-				color: #639EFF;
+				color: $blue;
 				font-size: 15px;
 				margin-left: 20px;
 				transition: .3s;
 
 				&:hover {
 					cursor: pointer;
-					color: #fff;
+					color: $whiteGray;
 				}
 			}
 		}
@@ -194,7 +199,7 @@ export default {
 		outline: none;
 
 		p {
-			color: #fff;
+			color: $whiteGray;
 			font-size: 15px;
 			font-weight: 400;
 			line-height: 23px;
