@@ -1,0 +1,5 @@
+/build/
+/config/
+/dist/
+/*.vue
+/src/components/TheEditor/index.vue
