@@ -143,14 +143,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/app";
+@import "../../assets/scss/app";
 @import "./src/assets/scss/vendor/variables";
 
 .editor {
 	padding: 76px 0 76px;
+	@media(max-width: $mobile) {
+		padding: 0;
+	}
 
 	&__nav-button {
 		display: flex;
+		@media(max-width: $mobile) {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 8px 16px;
+			background-color: $whiteGray;
+		}
 
 		.button {
 			&_style {
@@ -184,10 +195,14 @@ export default {
 				font-size: 15px;
 				margin-left: 20px;
 				transition: .3s;
-
 				&:hover {
 					cursor: pointer;
 					color: $whiteGray;
+					@media(max-width: $mobile) {
+						&:not(&:hover){
+							color: $dark;
+						}
+					}
 				}
 			}
 		}
@@ -197,6 +212,9 @@ export default {
 		margin-top: 32px;
 		border: none;
 		outline: none;
+		@media(max-width: $mobile) {
+			margin-top: 0;
+		}
 
 		p {
 			color: $whiteGray;
